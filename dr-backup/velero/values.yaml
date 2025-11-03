@@ -1,0 +1,8 @@
+configuration:
+  provider: aws
+  backupStorageLocation:
+    bucket: velero-ocp-dev-123456
+    config:
+      region: us-east-1
+credentials:
+  useSecret: true

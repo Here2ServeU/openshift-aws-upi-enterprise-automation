@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sample-microservice
+spec:
+  replicas: 2
+  selector: { matchLabels: { app: sample-microservice } }
+  template:
+    metadata:
+      labels: { app: sample-microservice, env: dev }
+    spec:
+      containers:
+        - name: app
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          ports: [{ containerPort: 8080 }]

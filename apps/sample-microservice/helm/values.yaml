@@ -1,0 +1,6 @@
+image:
+  repository: public.ecr.aws/unknown/sample-microservice
+  tag: "0.1.0"
+service:
+  type: ClusterIP
+  port: 80

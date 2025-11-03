@@ -1,0 +1,11 @@
+apiVersion: imageregistry.operator.openshift.io/v1
+kind: Config
+metadata:
+  name: cluster
+spec:
+  managementState: Managed
+  storage:
+    s3:
+      bucket: ocp-registry-dev-123456
+      region: us-east-1
+      encrypt: true

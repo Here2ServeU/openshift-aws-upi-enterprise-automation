@@ -1,0 +1,14 @@
+- name: OpenShift post-install hardening
+  hosts: masters,workers
+  become: yes
+  tasks:
+    - name: Ensure chrony is installed and enabled
+      package: { name: chrony, state: present }
+    - name: Ensure chrony running
+      service: { name: chronyd, state: started, enabled: yes }
+    - name: Enforce kernel params for security (sample)
+      sysctl:
+        name: net.ipv4.conf.all.rp_filter
+        value: "1"
+        state: present
+        reload: yes

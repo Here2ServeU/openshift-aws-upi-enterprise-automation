@@ -1,0 +1,9 @@
+apiVersion: v1
+baseDomain: example.corp
+metadata:
+  name: upi-ocp
+platform:
+  aws:
+    region: us-east-1
+pullSecret: '{"auths":{"fake.local":{"auth":"aW52YWxpZA=="}}}'
+sshKey: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDdemo user@host"

@@ -1,0 +1,17 @@
+name: infra-ci
+on:
+  pull_request:
+    paths:
+      - 'infra/**'
+jobs:
+  tf-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hashicorp/setup-terraform@v3
+      - run: terraform -chdir=infra/terraform/envs/dev init -backend=false
+      - run: terraform -chdir=infra/terraform/envs/dev validate
+      - run: echo "Policy checks (Checkov)"
+      - run: |
+          pip install checkov || true
+          checkov -d infra/terraform || true
