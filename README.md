@@ -1,10 +1,10 @@
 
 # Case Study: Automating Enterprise-Grade OpenShift on AWS (User-Provisioned Infrastructure)
 
-**Author:** Emmanuel Naweji  
-**Role:** Senior Cloud / DevOps / SRE Engineer | PhD Candidate in Computer Science (AI & ML Focus)  
-**Project Type:** Enterprise Automation Case Study  
-**Technologies:** OpenShift, AWS, Terraform, Ansible, CloudFormation, GitHub Actions, Jenkins, ArgoCD, Helm, Kyverno, Prometheus, Grafana, Velero, OTel  
+- **Author:** Emmanuel Naweji  
+- ** Senior Cloud / DevOps / SRE Engineer | PhD Candidate in Computer Science (AI & ML Focus)  
+- **Project Type:** Enterprise Automation Case Study  
+- **Technologies:** OpenShift, AWS, Terraform, Ansible, CloudFormation, GitHub Actions, Jenkins, ArgoCD, Helm, Kyverno, Prometheus, Grafana, Velero, OTel  
 
 ---
 
